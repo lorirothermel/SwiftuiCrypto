@@ -24,6 +24,7 @@
 		DF7C25372A023E310075658E /* CoinImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C25362A023E310075658E /* CoinImageView.swift */; };
 		DF7C25392A0240500075658E /* CoinImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C25382A0240500075658E /* CoinImageService.swift */; };
 		DF7C253B2A0243470075658E /* CoinImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C253A2A0243470075658E /* CoinImageViewModel.swift */; };
+		DF7C253D2A024E860075658E /* LocalFileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7C253C2A024E860075658E /* LocalFileManager.swift */; };
 		DFE63AE62A01F53F0065CD62 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE63AE52A01F53F0065CD62 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		DF7C25362A023E310075658E /* CoinImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageView.swift; sourceTree = "<group>"; };
 		DF7C25382A0240500075658E /* CoinImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageService.swift; sourceTree = "<group>"; };
 		DF7C253A2A0243470075658E /* CoinImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinImageViewModel.swift; sourceTree = "<group>"; };
+		DF7C253C2A024E860075658E /* LocalFileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFileManager.swift; sourceTree = "<group>"; };
 		DFE63AE52A01F53F0065CD62 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				DFE63AE52A01F53F0065CD62 /* NetworkingManager.swift */,
+				DF7C253C2A024E860075658E /* LocalFileManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				DF4239BE29FF9FCD009F6048 /* CoinRowView.swift in Sources */,
 				DF77445D2A00F93B0058070D /* HomeViewModel.swift in Sources */,
 				DF42399D29FF75FD009F6048 /* ContentView.swift in Sources */,
+				DF7C253D2A024E860075658E /* LocalFileManager.swift in Sources */,
 				DF4239B329FF7C72009F6048 /* HomeView.swift in Sources */,
 				DF7C25372A023E310075658E /* CoinImageView.swift in Sources */,
 				DF42399B29FF75FD009F6048 /* SwiftuiCryptoApp.swift in Sources */,
