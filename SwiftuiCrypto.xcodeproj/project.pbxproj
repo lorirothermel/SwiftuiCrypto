@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DF01D0B12A05A811008C546A /* CoinLogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF01D0B02A05A811008C546A /* CoinLogoView.swift */; };
+		DF203E012A0626AF002A04C4 /* PortfolioContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF203DFF2A0626AF002A04C4 /* PortfolioContainer.xcdatamodeld */; };
+		DF203E032A062758002A04C4 /* PortfolioDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF203E022A062758002A04C4 /* PortfolioDataService.swift */; };
 		DF42399B29FF75FD009F6048 /* SwiftuiCryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF42399A29FF75FD009F6048 /* SwiftuiCryptoApp.swift */; };
 		DF42399D29FF75FD009F6048 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF42399C29FF75FD009F6048 /* ContentView.swift */; };
 		DF42399F29FF75FE009F6048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF42399E29FF75FE009F6048 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		DF01D0B02A05A811008C546A /* CoinLogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinLogoView.swift; sourceTree = "<group>"; };
+		DF203E002A0626AF002A04C4 /* PortfolioContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PortfolioContainer.xcdatamodel; sourceTree = "<group>"; };
+		DF203E022A062758002A04C4 /* PortfolioDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioDataService.swift; sourceTree = "<group>"; };
 		DF42399729FF75FD009F6048 /* SwiftuiCrypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftuiCrypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF42399A29FF75FD009F6048 /* SwiftuiCryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftuiCryptoApp.swift; sourceTree = "<group>"; };
 		DF42399C29FF75FD009F6048 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				DF4239BB29FF8C6E009F6048 /* CoinModel.swift */,
 				DFF2C6F82A0488C00092A963 /* StatisticModel.swift */,
 				DFF2C7022A049A930092A963 /* MarketDataModel.swift */,
+				DF203DFF2A0626AF002A04C4 /* PortfolioContainer.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -209,6 +214,7 @@
 				DF77445F2A01028D0058070D /* CoinDataService.swift */,
 				DF7C25382A0240500075658E /* CoinImageService.swift */,
 				DFF2C7042A04A6D40092A963 /* MarketDataService.swift */,
+				DF203E022A062758002A04C4 /* PortfolioDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF203E012A0626AF002A04C4 /* PortfolioContainer.xcdatamodeld in Sources */,
 				DFF2C6F92A0488C00092A963 /* StatisticModel.swift in Sources */,
 				DF7744602A01028D0058070D /* CoinDataService.swift in Sources */,
 				DF4239BE29FF9FCD009F6048 /* CoinRowView.swift in Sources */,
@@ -329,6 +336,7 @@
 				DF4239C229FFA66E009F6048 /* Double.swift in Sources */,
 				DF7C25392A0240500075658E /* CoinImageService.swift in Sources */,
 				DF4239BC29FF8C6E009F6048 /* CoinModel.swift in Sources */,
+				DF203E032A062758002A04C4 /* PortfolioDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +541,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DF203DFF2A0626AF002A04C4 /* PortfolioContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DF203E002A0626AF002A04C4 /* PortfolioContainer.xcdatamodel */,
+			);
+			currentVersion = DF203E002A0626AF002A04C4 /* PortfolioContainer.xcdatamodel */;
+			path = PortfolioContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = DF42398F29FF75FD009F6048 /* Project object */;
 }
