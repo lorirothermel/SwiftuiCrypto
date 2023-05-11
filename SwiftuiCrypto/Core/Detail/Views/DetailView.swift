@@ -24,6 +24,7 @@ struct DetailLoadingView: View {
 
 struct DetailView: View {
     @StateObject private var vm: DetailViewModel
+    @State private var showFullDescription: Bool = false
     
     private let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -38,21 +39,29 @@ struct DetailView: View {
         
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                Text("")
-                    .frame(height: 150)
-                overviewTitle
-                Divider()
-                overviewGrid
-                additionalTitle
-                Divider()
-                additionalGrid
+            VStack {
+                ChartView(coin: vm.coin)
+                    .padding(.vertical)
+                VStack(spacing: 20) {
+                    overviewTitle
+                    Divider()
+                    descriptionSection
+                    overviewGrid
+                    additionalTitle
+                    Divider()
+                    additionalGrid
+                    websiteSection
+                }  // VStack
+                .padding()
             }  // VStack
-            .padding()
         }  // ScrollView
         .navigationTitle(vm.coin.name)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                navigationBarTrailingItems
+            }  // ToolbarItem
+        }  // .toolbar
     }  // some View
-    
 }  // DetailView
 
 
@@ -84,6 +93,34 @@ extension DetailView {
         
     }  // additionalTitle
     
+    
+    private var descriptionSection: some View {
+        ZStack {
+            if let coinDescription = vm.coinDescription,
+               !coinDescription.isEmpty {
+                VStack(alignment: .leading) {
+                    Text(coinDescription)
+                        .lineLimit(showFullDescription ? nil : 3)
+                        .font(.subheadline)
+                        .foregroundColor(.theme.secondaryText)
+                    Button {
+                        withAnimation(.easeInOut) {
+                            showFullDescription.toggle()
+                        }
+                    } label: {
+                        Text(showFullDescription ? "Less" : "Read more...")
+                            .font(.caption)
+                            .fontWeight(.bold)
+                            .padding(.vertical, 2)
+                    }  // Button
+                    .accentColor(.blue)
+                }  // VStack
+                .frame(maxWidth: .infinity, alignment: .leading)
+            }  // if let
+        }  // ZStack
+    }  // descriptionSection
+    
+    
     private var overviewGrid: some View {
         LazyVGrid(columns: columns,
                   alignment: .leading,
@@ -105,6 +142,34 @@ extension DetailView {
             }  // ForEach
         }  // LazyVGrid
     }  // additionalGrid
+    
+    private var navigationBarTrailingItems: some View {
+        HStack() {
+            Text(vm.coin.symbol.uppercased())
+                .font(.headline)
+                .foregroundColor(.theme.secondaryText)
+            CoinImageView(coin: vm.coin)
+                .frame(width: 25, height: 25)
+        }  // HStack
+    }  // navigationBarTrailingItems
+    
+    
+    private var websiteSection: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            if let websiteString = vm.websiteURL,
+               let url = URL(string: websiteString) {
+                    Link("Website: ", destination: url)
+            }  // if let
+            
+            if let redditString = vm.redditURL,
+               let url = URL(string: redditString) {
+                    Link("Reddit: ", destination: url)
+            }  // if let
+        }  // VStack
+        .accentColor(.blue)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .font(.headline)
+    }  // websiteSection
     
     
 }  // extension DetailView
